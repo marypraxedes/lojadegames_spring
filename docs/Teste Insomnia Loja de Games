@@ -1,0 +1,324 @@
+type: collection.insomnia.rest/5.0
+schema_version: "5.1"
+name: Loja de Games
+meta:
+  id: wrk_94f809452f5d4016aa9b753a6581aa36
+  created: 1784734974596
+  modified: 1784734974596
+  description: ""
+collection:
+  - name: Produto
+    meta:
+      id: fld_c881c0c478c147fca5dc7255632d9211
+      created: 1784735749147
+      modified: 1784735749147
+      sortKey: -1784735749147
+      description: ""
+    children:
+      - url: http://localhost:8080/produtos
+        name: Criar Produto
+        meta:
+          id: req_f329ebb033244e1db0b68dd64d3a8bfa
+          created: 1784734985680
+          modified: 1784736874074
+          isPrivate: false
+          description: ""
+          sortKey: -1784735751745
+        method: POST
+        body:
+          mimeType: application/json
+          text: >-
+            {
+              "titulo": "Spider-Man Miles Morales",
+              "descricao": "Jogo de ação e aventura com Miles Morales protegendo Nova York.",
+              "preco": 199.90,
+              "estoque": 25,
+              "foto": "https://ik.imagekit.io/1frzfy0hh/spiderman.png",
+              "categoria": {
+                "id": 6
+              }
+            }
+        headers:
+          - name: Content-Type
+            value: application/json
+        settings:
+          renderRequestBody: true
+          encodeUrl: true
+          followRedirects: global
+          cookies:
+            send: true
+            store: true
+          rebuildPath: true
+      - url: http://localhost:8080/produtos
+        name: Buscar todos os Produtos
+        meta:
+          id: req_e7fd20f7516e4a58ae07ae8f0f5dfb2b
+          created: 1784736912710
+          modified: 1784737470853
+          isPrivate: false
+          description: ""
+          sortKey: -1784735751845
+        method: GET
+        settings:
+          renderRequestBody: true
+          encodeUrl: true
+          followRedirects: global
+          cookies:
+            send: true
+            store: true
+          rebuildPath: true
+      - url: http://localhost:8080/produtos/titulo/microsoft
+        name: Buscar Produto por Título
+        meta:
+          id: req_a28ee7c18cf244deb17a966b5358a534
+          created: 1784736968600
+          modified: 1784737569090
+          isPrivate: false
+          description: ""
+          sortKey: -1784736968600
+        method: GET
+        settings:
+          renderRequestBody: true
+          encodeUrl: true
+          followRedirects: global
+          cookies:
+            send: true
+            store: true
+          rebuildPath: true
+      - url: http://localhost:8080/produtos/maior/200
+        name: Buscar Produtos com Preço Maior que 200
+        meta:
+          id: req_6e2056dc6f4447e29d6e3daefcddf62a
+          created: 1784737037962
+          modified: 1784737084674
+          isPrivate: false
+          description: ""
+          sortKey: -1784737037962
+        method: GET
+        settings:
+          renderRequestBody: true
+          encodeUrl: true
+          followRedirects: global
+          cookies:
+            send: true
+            store: true
+          rebuildPath: true
+      - url: http://localhost:8080/produtos/menor/300
+        name: Buscar Produtos com Preço Menor que 300
+        meta:
+          id: req_384c4ace34b04512bc3b2656e71096dc
+          created: 1784737119193
+          modified: 1784737123622
+          isPrivate: false
+          description: ""
+          sortKey: -1784737003281
+        method: GET
+        settings:
+          renderRequestBody: true
+          encodeUrl: true
+          followRedirects: global
+          cookies:
+            send: true
+            store: true
+          rebuildPath: true
+      - url: http://localhost:8080/produtos
+        name: Atualizar Produto
+        meta:
+          id: req_790208a7a9074da485b47a33908730bb
+          created: 1784737160051
+          modified: 1784737460069
+          isPrivate: false
+          description: ""
+          sortKey: -1784737160051
+        method: PUT
+        body:
+          mimeType: application/json
+          text: >-
+            {
+              "id": 1,
+              "titulo": "EA Sports FIFA 23",
+              "descricao": "Jogo de futebol atualizado com times, jogadores e campeonatos oficiais.",
+              "preco": 199.90,
+              "estoque": 35,
+              "foto": "https://ik.imagekit.io/1frzfy0hh/fifa_23-min.png",
+              "categoria": {
+                "id": 2
+              }
+            }
+        headers:
+          - name: Content-Type
+            value: application/json
+        settings:
+          renderRequestBody: true
+          encodeUrl: true
+          followRedirects: global
+          cookies:
+            send: true
+            store: true
+          rebuildPath: true
+      - url: http://localhost:8080/produtos/2
+        name: Deletar Produto
+        meta:
+          id: req_a1cb9a3cbd5d41c589c6d40d1cd26b69
+          created: 1784737504440
+          modified: 1784737539743
+          isPrivate: false
+          description: ""
+          sortKey: -1784737160151
+        method: DELETE
+        settings:
+          renderRequestBody: true
+          encodeUrl: true
+          followRedirects: global
+          cookies:
+            send: true
+            store: true
+          rebuildPath: true
+  - name: Categoria
+    meta:
+      id: fld_feb419f342ef476b92b8ddfd977302d6
+      created: 1784735760857
+      modified: 1784735760857
+      sortKey: -1784735760857
+      description: ""
+    children:
+      - url: http://localhost:8080/categorias
+        name: Criar Categoria
+        meta:
+          id: req_b6293577b1054741a989426fca8cd58c
+          created: 1784735763534
+          modified: 1784736679713
+          isPrivate: false
+          description: ""
+          sortKey: -1784735763534
+        method: POST
+        body:
+          mimeType: application/json
+          text: |-
+            {
+              "tipo": "Ação"
+            }
+        headers:
+          - name: Content-Type
+            value: application/json
+        settings:
+          renderRequestBody: true
+          encodeUrl: true
+          followRedirects: global
+          cookies:
+            send: true
+            store: true
+          rebuildPath: true
+      - url: http://localhost:8080/categorias
+        name: Buscar todas as Categorias
+        meta:
+          id: req_ed3d46243d564bf9bd8ee474b0f137f3
+          created: 1784736082582
+          modified: 1784736117768
+          isPrivate: false
+          description: ""
+          sortKey: -1784736082582
+        method: GET
+        settings:
+          renderRequestBody: true
+          encodeUrl: true
+          followRedirects: global
+          cookies:
+            send: true
+            store: true
+          rebuildPath: true
+      - url: http://localhost:8080/categorias/1
+        name: Buscar Categoria por ID
+        meta:
+          id: req_521cfe252183430d9e16b2b0be4ea86c
+          created: 1784736128557
+          modified: 1784736145901
+          isPrivate: false
+          description: ""
+          sortKey: -1784736128557
+        method: GET
+        settings:
+          renderRequestBody: true
+          encodeUrl: true
+          followRedirects: global
+          cookies:
+            send: true
+            store: true
+          rebuildPath: true
+      - url: http://localhost:8080/categorias/tipo/RPG
+        name: Buscar Categoria por Tipo
+        meta:
+          id: req_32cb89a2ac5a4dc1818d2fd476436f9b
+          created: 1784736157641
+          modified: 1784736173924
+          isPrivate: false
+          description: ""
+          sortKey: -1784736157641
+        method: GET
+        settings:
+          renderRequestBody: true
+          encodeUrl: true
+          followRedirects: global
+          cookies:
+            send: true
+            store: true
+          rebuildPath: true
+      - url: http://localhost:8080/categorias
+        name: Atualizar Categoria
+        meta:
+          id: req_9652e76f30dd435e8df573c02b66c1d9
+          created: 1784736183559
+          modified: 1784736210402
+          isPrivate: false
+          description: ""
+          sortKey: -1784736183559
+        method: PUT
+        body:
+          mimeType: application/json
+          text: |-
+            {
+              "id": 1,
+              "tipo": "Aventura"
+            }
+        headers:
+          - name: Content-Type
+            value: application/json
+        settings:
+          renderRequestBody: true
+          encodeUrl: true
+          followRedirects: global
+          cookies:
+            send: true
+            store: true
+          rebuildPath: true
+      - url: http://localhost:8080/categorias/1
+        name: Deletar Categoria
+        meta:
+          id: req_3e571c7c5a784ff880910e61524d47dc
+          created: 1784736224899
+          modified: 1784737581356
+          isPrivate: false
+          description: ""
+          sortKey: -1784736224899
+        method: DELETE
+        settings:
+          renderRequestBody: true
+          encodeUrl: true
+          followRedirects: global
+          cookies:
+            send: true
+            store: true
+          rebuildPath: true
+cookieJar:
+  name: Default Jar
+  meta:
+    id: jar_47b4c6a5ee284c343f88c3e1c016448603499dcd
+    created: 1784734974633
+    modified: 1784734974633
+environments:
+  name: Base Environment
+  meta:
+    id: env_47b4c6a5ee284c343f88c3e1c016448603499dcd
+    created: 1784734974629
+    modified: 1784734974629
+    isPrivate: false
