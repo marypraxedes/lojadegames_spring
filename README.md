@@ -192,7 +192,7 @@ Todos os endpoints foram testados utilizando o **Insomnia**, validando as opera√
 
 **Maryane Praxedes**
 
-[![LinkedIn](https://img.shields.io/badge/LinkedIn-0077B5?style=flat-square&logo=linkedin)](https://linkedin.com/marypraxedes)
+[![LinkedIn](https://img.shields.io/badge/LinkedIn-0077B5?style=flat-square&logo=linkedin)](https://linkedin.com/in/marypraxedes)
 
 [![GitHub](https://img.shields.io/badge/GitHub-181717?style=flat-square&logo=github)](https://github.com/marypraxedes)
 
